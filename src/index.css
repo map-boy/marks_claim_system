@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDF1DC;
+  --color-sand: #F8E0BC;
+  --color-teal: #1F7A78;
+  --color-tealdark: #0F5E5C;
+  --color-tangerine: #E8512A;
+  --color-ink: #3B2A20;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  background: #FDF1DC;
+  color: #3B2A20;
+  font-family: "Segoe UI", Tahoma, system-ui, sans-serif;
+}
+
+.print-only { display: none; }
+
+@page { size: A4 landscape; margin: 10mm; }
+
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  span.print-only { display: inline !important; }
+  body { background: #fff; }
+  table { font-size: 10.5px; }
+  th, td { border: 1px solid #999; padding: 3px 5px; }
+  tr { page-break-inside: avoid; }
+}
