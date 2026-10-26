@@ -1,1 +1,6 @@
-{ "rewrites": [{ "source": "/((?!marks/assets/).*)", "destination": "/index.html" }] }
+{
+  "rewrites": [
+    { "source": "/marks/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
